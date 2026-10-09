@@ -1,0 +1,292 @@
+/*******************************************************
+ * My custom styles (added on top of the DevFolio template)
+ * Brand colour: change --brand to change the blue everywhere
+ * in these new sections. (The template's own blue is #1565C0
+ * in css/style.css — use Find & Replace there to change it.)
+ *******************************************************/
+:root {
+    --brand: #1565C0;
+    --brand-dark: #0D47A1;
+    --brand-soft: #E3ECF8;
+    --ink: #313131;
+    --muted: #666666;
+}
+
+/* Service card title that links to the Cyber Security section */
+.service .service-link { color: inherit; }
+.service .service-link:hover { text-decoration: none; }
+
+/* ---------- Cyber Security ---------- */
+.security {
+    position: relative;
+    width: 100%;
+    padding: 45px 0 30px 0;
+    background: #f8f9fa;
+}
+
+.security .section-header p { background: #f8f9fa; }
+
+.sec-card {
+    height: calc(100% - 30px);
+    margin-bottom: 30px;
+    padding: 30px;
+    background: #ffffff;
+    border-top: 4px solid var(--brand);
+    box-shadow: 0 0 15px rgba(0, 0, 0, .07);
+    transition: transform .3s, box-shadow .3s;
+}
+
+.sec-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(21, 101, 192, .18);
+}
+
+.sec-icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: #ffffff;
+    background: var(--brand);
+}
+
+.sec-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.sec-card p {
+    font-size: 15px;
+    color: var(--muted);
+}
+
+.sec-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+
+.sec-tags span {
+    padding: 3px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--brand-dark);
+    background: var(--brand-soft);
+}
+
+/* ---------- Projects: GitHub button on each card ---------- */
+
+.portfolio .portfolio-text a.btn.gh {
+    margin-right: 5px;
+    font-size: 24px;
+    padding: 0;
+}
+
+
+.github-all { margin-bottom: 15px; }
+.github-all .btn i { margin-right: 6px; }
+
+/* ---------- Business ---------- */
+.business {
+    position: relative;
+    width: 100%;
+    padding: 45px 0 30px 0;
+    background: linear-gradient(180deg, var(--brand-soft) 0, #ffffff 380px);
+}
+
+.business .section-header p { background: var(--brand-soft); }
+
+.biz-profile { margin-bottom: 60px; }
+
+.biz-cover { position: relative; margin-bottom: 30px; }
+
+.biz-cover img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    box-shadow: 0 15px 35px rgba(13, 71, 161, .2);
+}
+
+.biz-badge {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    padding: 8px 14px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    background: var(--brand);
+}
+
+.biz-text h3 { font-size: 28px; font-weight: 700; margin-bottom: 15px; }
+.biz-text h4 { font-size: 18px; font-weight: 600; margin: 10px 0 12px; }
+.biz-text p { color: var(--muted); }
+
+.biz-facts { margin: 20px 0 10px; }
+
+.biz-facts > div {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 18px;
+}
+
+.biz-facts i {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    background: var(--brand);
+}
+
+.biz-facts strong { display: block; font-size: 14px; color: var(--ink); }
+.biz-facts span { font-size: 14px; color: var(--muted); }
+
+.biz-list { list-style: none; padding: 0; margin: 0 0 25px; columns: 2; }
+.biz-list li { margin-bottom: 8px; break-inside: avoid; }
+.biz-list i { color: var(--brand); margin-right: 8px; }
+
+@media (max-width: 575.98px) { .biz-list { columns: 1; } }
+
+.biz-text .btn { margin: 0 10px 10px 0; }
+.biz-text .btn i { margin-right: 6px; }
+
+.btn.btn-outline {
+    color: var(--brand);
+    background: transparent;
+    border-color: var(--brand);
+    box-shadow: none;
+}
+
+.btn.btn-outline:hover {
+    color: #ffffff;
+    background: var(--brand);
+}
+
+.biz-gallery-head { margin-bottom: 30px; }
+.biz-gallery-head h3 { font-size: 32px; font-weight: 700; margin-bottom: 5px; }
+.biz-gallery-head p { color: var(--muted); margin: 0; }
+
+.biz-gallery > div { margin-bottom: 30px; }
+
+.biz-gallery a {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+.biz-gallery img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+    transition: transform .5s;
+}
+
+.biz-gallery a span {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #ffffff;
+    background: rgba(21, 101, 192, .55);
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+.biz-gallery a:hover img { transform: scale(1.08); }
+.biz-gallery a:hover span { opacity: 1; }
+
+@media (max-width: 575.98px) {
+    .biz-gallery > div { margin-bottom: 15px; padding-left: 8px; padding-right: 8px; }
+}
+
+/* keep the small line beside section labels visible on tinted backgrounds */
+.security, .business { z-index: 0; }
+
+/* Business logo card: shows the whole wide logo on white, no cropping */
+.biz-cover {
+    padding: 40px 25px 70px;
+    background: #ffffff;
+    border-top: 4px solid #E0A722;   /* gold from the logo */
+    box-shadow: 0 15px 35px rgba(13, 71, 161, .15);
+}
+
+.biz-cover img.biz-logo {
+    aspect-ratio: auto;
+    height: auto;
+    object-fit: contain;
+    box-shadow: none;
+    mix-blend-mode: multiply;   /* blends the logo's off-white background into the card */
+}
+
+/* ---------- Project cards (polished) ---------- */
+.portfolio .portfolio-img { aspect-ratio: 4 / 3; }
+.portfolio .portfolio-img img { transform: none; }
+.portfolio .portfolio-item:hover .portfolio-img img { margin-left: 0; transform: scale(1.05); }
+
+.portfolio .portfolio-text {
+    height: 64px;
+    padding-right: 8px;
+    gap: 6px;
+}
+
+.portfolio .portfolio-text .pt {
+    flex: 1;
+    min-width: 0;
+    margin-left: 18px;
+    line-height: 1.2;
+}
+
+.portfolio .portfolio-text .pt h3 {
+    width: auto;
+    margin: 0;
+    font-size: 17px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.portfolio .portfolio-text .pt small {
+    display: block;
+    margin-top: 3px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    color: #8a94a6;
+}
+
+/* all buttons the same: small, square, outlined until hovered */
+.portfolio .portfolio-text a.btn,
+.portfolio .portfolio-text a.btn.gh {
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 400;
+    color: #1565C0;
+    background: transparent;
+    border: 1.5px solid #d5deeb;
+    box-shadow: none;
+}
+
+.portfolio .portfolio-text a.btn:not(.gh) { font-size: 26px; padding-bottom: 3px; }
+
+.portfolio .portfolio-item:hover a.btn,
+.portfolio .portfolio-text a.btn:hover {
+    color: #1565C0;
+    border-color: #1565C0;
+}
+
+.portfolio .portfolio-text a.btn:hover {
+    color: #ffffff;
+    background: #1565C0;
+}
