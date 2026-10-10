@@ -129,7 +129,7 @@
         fetch(API + "/chat", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ message: text, history: history.slice(-6) }),
+            body: JSON.stringify({ message: text, history: history.slice(-10) }),
             signal: controller ? controller.signal : undefined
         })
             .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
